@@ -1,10 +1,9 @@
-! function(a) {
+! async function(a) {
     "use strict";
     var e = a(".header__content").attr("data-page-url"),
         t = document.title,
         o = window.History,
         n = a(".page__content").attr("data-image");
-    console.log(e)
     function i() {
         a(".header-image").imagesLoaded({
             background: !0
@@ -70,13 +69,17 @@
             a(this).wrapAll('<div class="table-wrap"></div>')
         })
     }
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    await sleep(200)
     o.Adapter.bind(window, "statechange", function() {
         var l = o.getState();
         a("body").addClass("loading"), a(".page-loader").load(l.hash + " .page__content", function() {
             setTimeout(function() {
                 a("body, html").animate({
                     scrollTop: 0
-                }, 0), a(".page .page__content").remove(), a(".page-loader .page__content").appendTo(".page"), a("body").attr("data-page-url", window.location.pathname), e = a("body").attr("data-page-url"), t = a(".page__content").attr("data-page-title"), document.title = t;
+                }, 0), a(".page .page__content").remove(), a(".page-loader .page__content").appendTo(".page"), a(".header__content").attr("data-page-url", window.location.pathname), e = a(".header__content").attr("data-page-url"), t = a(".page__content").attr("data-page-title"), document.title = t;
                 var o = a(".page__content").attr("data-image");
                 i(), o !== n && (n = o, a(".header-image:not(.header-image--on)").css("background-image", "url(" + n + ")"), a(".header-image:not(.header-image--on)").addClass("header-image--switch"), a(".header-image--switch").imagesLoaded({
                     background: !0

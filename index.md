@@ -2,5 +2,6 @@
 layout: home
 title: Latest
 description: A simple and elegant jekyll blog theme.
+image: assets/images/home.jpg
 ---
 # Welcome
