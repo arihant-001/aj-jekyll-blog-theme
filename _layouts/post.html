@@ -1,5 +1,23 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
-{{ content }}
+{% include head.html %}
+
+<body class="ajax-loading" data-site-url="https://arihant-001.github.io/aj-jekyll-blog-theme/" data-page-url="{{ page.url | relative_url }}">
+
+    {% include header.html %}
+
+	{% include loader.html %}
+
+	<div class="page">
+
+		<div class="page__content" data-page-title="{{ page.title }}" data-image="{{ page.image }}">
+
+
+		</div>
+
+	</div>
+
+</body>
+
+</html>
