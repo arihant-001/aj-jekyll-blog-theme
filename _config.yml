@@ -3,7 +3,7 @@ title: AJ Blogs
 subtitle: Blog page theme
 email: youremailaddress@gmail.com
 description: A simple and elegant jekyll theme for blogs.
-baseurl: "/"
+baseurl: "/aj-jekyll-blog-theme"
 url: "http://0.0.0.0:4000"
 author:
 street_address: 1234 Some street Road

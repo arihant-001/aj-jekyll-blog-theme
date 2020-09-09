@@ -4,7 +4,7 @@ title: About Me
 description: A simple and elegant jekyll blog theme.
 image: assets/images/about.jpg
 ---
-![test image]({{ site.url | absolute_path}}/assets/images/project-05.jpg)
+![test image]({{ site.baseurl }}/assets/images/project-05.jpg)
 
 ### Summary
 

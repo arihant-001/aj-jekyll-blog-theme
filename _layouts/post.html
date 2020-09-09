@@ -3,7 +3,7 @@
 
 {% include head.html %}
 
-<body class="ajax-loading" data-site-url="https://arihant-001.github.io/aj-jekyll-blog-theme/" data-page-url="{{ page.url | relative_url }}">
+<body class="ajax-loading" data-site-url="{{ site.url }}/{{ site.baseurl }}" data-page-url="{{ page.url | relative_url }}">
 
     {% include header.html %}
 
@@ -11,14 +11,14 @@
 
 	<div class="page">
 
-		<div class="page__content" data-page-title="{{ page.title }}" data-image="{{ site.url }}/{{ page.image }}">
+		<div class="page__content" data-page-title="{{ page.title }}" data-image="{{ page.image | relative_url }}">
 
 			<section class="intro">
 
 				<div class="wrap">
 
 					<h1>{{ page.title }}</h1>
-					<p>{{ page.date }}</p>
+					<p>{{ page.date | date_to_string: "ordinal" }}</p>
 
 				</div>
 
@@ -27,7 +27,7 @@
 			<section class="single">
 
 				<div class="wrap">
-					{{ content}}
+					{{ content }}
 				</div>
 
 			</section>
