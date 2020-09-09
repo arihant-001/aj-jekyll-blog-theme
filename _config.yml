@@ -24,10 +24,9 @@ linkedin_url: https://www.linkedin.com/in/
 pinterest_url:
 slack_url:
 twitter_url: https://twitter.com/
-
+formspree_url: https://formspree.io/xqkyrway
 collections:
-  projects:
-      sort_by: title | reverse
+  - projects
 # build settings
 markdown: kramdown
 
