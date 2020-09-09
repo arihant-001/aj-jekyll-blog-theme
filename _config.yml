@@ -15,16 +15,13 @@ phone: (+91) 9876543210
 
 # social settings
 500px_url:
-facebook_url:
-github_url:
-gitlab_url: https://gitlab.com
-googleplus_url: https://plus.google.com/
-instagram_url: https://instagram.com
-linkedin_url: https://www.linkedin.com/in/
-pinterest_url:
-slack_url:
+facebook_url: https://facebook.com/
+dribble_url: https://dribble.com/
+tumblr_url: https://tumblr.com/
+instagram_url: https://instagram.com/
 twitter_url: https://twitter.com/
 formspree_url: https://formspree.io/xqkyrway
+
 collections:
   - projects
 # build settings
