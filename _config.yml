@@ -23,7 +23,9 @@ twitter_url: https://twitter.com/
 formspree_url: https://formspree.io/xqkyrway
 
 collections:
-  - projects
+  projects:
+    output: true
+
 # build settings
 markdown: kramdown
 
