@@ -25,6 +25,9 @@ pinterest_url:
 slack_url:
 twitter_url: https://twitter.com/
 
+collections:
+  projects:
+      sort_by: title | reverse
 # build settings
 markdown: kramdown
 
