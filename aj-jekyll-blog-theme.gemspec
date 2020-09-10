@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-    spec.name          = "aj-blog-jekyll-theme"
-    spec.version       = "0.1.0"
+    spec.name          = "aj-jekyll-blog-theme"
+    spec.version       = "1.0.0"
     spec.authors       = ["Arihant Jain"]
     spec.email         = [""]
 
