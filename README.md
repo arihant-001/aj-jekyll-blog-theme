@@ -6,6 +6,8 @@ A simple and elegant jekyll theme for blogs.
 - For setting github pages follow [Github Guides](https://guides.github.com/features/pages/)
 
 Fork this repository then start editing the `_config.yml` file.
+- update your name, email, etc.
+- update baseurl to `/` or ` ` or `your website baseurl`
 
 ## Features
 - Elegant Design
@@ -35,9 +37,9 @@ Fork this repository then start editing the `_config.yml` file.
 
 - Pagination
 
-## Contributing
+## Contribution
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/arihant-001/aj-jekyll-blog-theme>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
