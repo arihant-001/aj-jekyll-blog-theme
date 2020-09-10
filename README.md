@@ -1,37 +1,39 @@
-# aj-blog-jekyll-theme
+# AJ Blog - Jekyll Theme
+A simple and elegant jekyll theme for blogs.
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+## How to Use
+- If you are unfamiliar with jekyll, check out <http://jekyllrb.com> read up on just the basics of front matter, writing posts, and creating pages.
+- For setting github pages follow [Github Guides](https://guides.github.com/features/pages/)
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+Fork this repository then start editing the `_config.yml` file.
 
-TODO: Delete this and the text above, and describe your gem
+## Features
+- Elegant Design
+- Image Gallery  
+    ```html
+    <div class="gallery" data-columns="3">
+        <img src="/aj-jekyll-blog-theme/assets/images/home.jpg">
+        <img src="/aj-jekyll-blog-theme/assets/images/contact.jpg">
+        <img src="/aj-jekyll-blog-theme/assets/images/about.jpg">
+        <img src="/aj-jekyll-blog-theme/assets/images/project.jpg">
+        <img src="/aj-jekyll-blog-theme/assets/images/post1.jpg">
+    </div>
+    ```
+  
+    ![test image](./assets/images/gallery.png)
+    
+- Image Carousels
+    ```html
+    <div class="gallery" data-columns="1">
+        <img src="/aj-jekyll-blog-theme/assets/images/post1.jpg">
+        <img src="/aj-jekyll-blog-theme/assets/images/post2.jpg">
+        <img src="/aj-jekyll-blog-theme/assets/images/post3.jpg">
+        <img src="/aj-jekyll-blog-theme/assets/images/post4.jpg">
+    </div>
+    ```
+    ![test image](./assets/images/carousels.png)
 
-
-## Installation
-
-Add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "aj-blog-jekyll-theme"
-```
-
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: aj-blog-jekyll-theme
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install aj-blog-jekyll-theme
-
-## Usage
-
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+- Pagination
 
 ## Contributing
 
@@ -39,12 +41,24 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 
 ## Development
 
-To set up your environment to develop this theme, run `bundle install`.
+As there are many issues in jekyll and ruby installation, a `jekyll` docker image is used for development.
+```sh
+# build docker image 
+$ docker build -t theme .
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+# run docker container
+$ docker run -itd --name theme --mount type=bind,source="$(pwd)",target=/srv/jekyll/code -p 4000:4000 theme bash
 
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `aj-blog-jekyll-theme.gemspec` accordingly.
+# enter docker container
+$ docker exec -it theme bash
+
+$ cd code
+
+# run jekyll theme
+$ bundler exec jekyll serve --watch --host 0.0.0.0
+```
+
+Open <http://0.0.0.0:4000/aj-jekyll-blog-theme/> 
 
 ## License
 

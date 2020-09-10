@@ -3,7 +3,7 @@
 Gem::Specification.new do |spec|
     spec.name          = "aj-blog-jekyll-theme"
     spec.version       = "0.1.0"
-    spec.authors       = [""]
+    spec.authors       = ["Arihant Jain"]
     spec.email         = [""]
 
     spec.summary       = "A simple and elegant jekyll theme created for writing blogs"
