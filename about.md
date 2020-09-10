@@ -5,7 +5,7 @@ description: A simple and elegant jekyll blog theme.
 image: assets/images/about.jpg
 show: true
 ---
-![test image]({{ site.baseurl }}/assets/images/project-05.jpg)
+![test image]({{ site.baseurl }}/assets/images/project.jpg)
 
 ### Summary
 

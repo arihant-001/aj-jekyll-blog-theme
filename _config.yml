@@ -4,17 +4,10 @@ subtitle: Blog page theme
 email: youremailaddress@gmail.com
 description: A simple and elegant jekyll theme for blogs.
 baseurl: "/aj-jekyll-blog-theme"
-url: "http://0.0.0.0:4000"
-author:
-street_address: 1234 Some street Road
-city: Mumbai
-state: Maharashtra
-zip_code: 400001
-country: India
-phone: (+91) 9876543210
+url: "https://arihant-001.github.io"
+author: Arihant Jain
 
 # social settings
-500px_url:
 facebook_url: https://facebook.com/
 dribble_url: https://dribble.com/
 tumblr_url: https://tumblr.com/
@@ -31,10 +24,9 @@ markdown: kramdown
 
 sass:
   style: compressed
-gems:
-  - jekyll-paginate
 
 plugins:
   [jekyll-paginate]
+
 paginate: 5
 paginate_path: "/blog/page:num/"
