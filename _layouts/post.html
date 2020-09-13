@@ -32,6 +32,13 @@
 
 			</section>
 
+
+			{% if page.comments %}
+			<div id="disqus_thread" page-identifier="{{ page.title }}" data-page-url="{{ page.url | absolute_url}}">
+
+			</div>
+
+			{% endif %}
 		</div>
 
 	</div>

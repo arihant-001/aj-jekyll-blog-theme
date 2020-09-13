@@ -1,3 +1,19 @@
+function disqus() {
+    var c = document.getElementById('disqus_thread')
+    console.log(c.getAttribute('data-page-url'));
+    var disqus_config = function () {
+        this.page.url = c.getAttribute('data-page-url')
+        this.page.identifier = c.getAttribute('page-identifier');
+        console.log(this.page.url);
+    };
+
+    (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://arihant-001.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+}
 ! async function(a) {
     "use strict";
     var e = a(".header__content").attr("data-page-url"),
@@ -90,6 +106,7 @@
         })
     }), a("body").hasClass("ajax-loading") && a(document).on("click", "a", function(n) {
         n.preventDefault();
+
         var i = a(this).attr("href");
         a(this).hasClass("js-no-ajax") || i.indexOf("#") >= 0 || i.indexOf("mailto:") >= 0 || i.indexOf("tel:") >= 0 ? window.location = i : a(this).is(".gallery__item__link") || (i.indexOf("http") >= 0 ? window.open(i, "_blank") : (e = i, o.pushState(null, t, i)))
     }), i(), a(document).on("click", ".js-menu-toggle", function() {
@@ -105,3 +122,8 @@
         "" === t.val() && t.closest(".contact-form__item").addClass("contact-form__item--error"), "" === o.val() && o.closest(".contact-form__item").addClass("contact-form__item--error"), "" === n.val() && n.closest(".contact-form__item").addClass("contact-form__item--error"), "" !== t.val() && "" !== o.val() && "" !== n.val() && 0 === i.val().length || e.preventDefault()
     })
 }(jQuery);
+
+$(document).ready(function(){
+    disqus()
+    console.log("statechange")
+})

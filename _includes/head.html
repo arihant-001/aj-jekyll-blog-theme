@@ -44,5 +44,23 @@
 	<script defer="" src="{{ "assets/js/jquery.min.js" | relative_url }}"></script>
 	<script defer="" src="{{ "assets/js/aj-blog.js" | relative_url }}"></script>
 	<script defer="" src="{{ "assets/js/transition.js" | relative_url }}"></script>
+	{% if page.comments %}
+	<script>
+<!--		var c = document.getElementById('disqus_thread')-->
+<!--		console.log(c.getAttribute('data-page-url'));-->
+<!--		var disqus_config = function () {-->
+<!--			this.page.url = c.getAttribute('data-page-url')-->
+<!--			this.page.identifier = c.getAttributes('page-identifier');-->
+<!--			console.log(this.page.url);-->
+<!--		};-->
+
+<!--		(function() {-->
+<!--			var d = document, s = d.createElement('script');-->
+<!--			s.src = 'https://arihant-001.disqus.com/embed.js';-->
+<!--			s.setAttribute('data-timestamp', +new Date());-->
+<!--			(d.head || d.body).appendChild(s);-->
+<!--		})();-->
+	</script>
+	{% endif %}
 </head>
 
